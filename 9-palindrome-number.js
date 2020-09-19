@@ -16,6 +16,15 @@ const isPalindrome = function (x) {
   return true;
 };
 
-console.log(isPalindrome("121"));
-console.log(isPalindrome("-121"));
-console.log(isPalindrome("10"));
+const isPalindrome = function (x) {
+  let original = x;
+  let remember;
+  let reverse = 0;
+  while (original > 0) {
+    remember = original % 10;
+    reverse = reverse * 10 + remember;
+    original = Math.floor(original / 10);
+  }
+  return x == reverse;
+};
+console.log(isPalindrome(121));
