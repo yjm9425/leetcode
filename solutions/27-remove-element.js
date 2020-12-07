@@ -16,11 +16,8 @@ const removeElement = function (nums, val) {
   }
   return nums.length;
 };
-/**
- * @param {number[]} nums
- * @param {number} val
- * @return {number}
- */
+
+// 올바르게 인덱스 순회를 하는 방법
 const removeElement = function (nums, val) {
   let i = 0;
 
