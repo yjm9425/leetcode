@@ -29,6 +29,26 @@ function solution(plain) {
   return answer + plain.length;
 }
 
+function isPalindrome(target) {
+  for (let i = 0; i < target.length / 2; i++) {
+    if (target[i] != target[target.length - 1 - i]) return false;
+  }
+  return true;
+}
+
+function solution(plain) {
+  for (let i = 0; i < plain.length; i++) {
+    if (plain[i] == plain[plain.length - 1]) {
+      let substring = plain.substring(i, plain.length);
+      if (isPalindrome(substring)) {
+        console.log;
+        return plain.length + i;
+      }
+    }
+  }
+  return plain.length * 2 - 1;
+}
+
 console.log(solution("abab"));
 console.log(solution("abcde"));
 console.log(solution("aaa"));
